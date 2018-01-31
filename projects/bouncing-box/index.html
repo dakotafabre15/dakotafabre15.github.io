@@ -40,6 +40,8 @@
 			var boardWidth;
 			var update;
 			var handleBoxClick;
+			var direction = 1;
+			
 
 			// jQuery stuff setup for you
 			box = $('.box');
@@ -60,6 +62,14 @@
 				position = position + speed;
 				box.css('left', position)
 				box.text(points);
+				
+				
+				if(position > boardWidth) {
+					direction = -1;
+				postion = position + speed;
+				position = position + (speed * direction);
+			
+				}
 			};
 
 
