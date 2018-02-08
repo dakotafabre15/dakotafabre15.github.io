@@ -59,17 +59,20 @@
 
 			// TODO 3 / 6,7,8
 			update = function() {
-				position = position + speed;
-				box.css('left', position)
+				box.css('left', position);
 				box.text(points);
 				
 				
 				if(position > boardWidth) {
 					direction = -1;
-				postion = position + speed;
-				position = position + (speed * direction);
-			
 				}
+				else if(position < 0) {
+					direction = 1;
+				}
+				
+				position = position + (speed * direction);
+
+				
 			};
 
 
